@@ -42,21 +42,21 @@
         - Altrimenti, boh, come mi va
 */
 
-const wordOne = prompt('Inserisci la prima parola:');
-const wordTwo = prompt('Inserisci la seconda parola:');
+// const wordOne = prompt('Inserisci la prima parola:');
+// const wordTwo = prompt('Inserisci la seconda parola:');
 
-if (wordOne.length > wordTwo.length) {
-    console.log('Più corta', wordTwo);
-    console.log('Più lunga', wordOne);
-}
-else if (wordTwo.length > wordOne.length) {
-    console.log('Più corta', wordOne);
-    console.log('Più lunga', wordTwo);
-} 
-// else if (wordOne.length == wordTwo.length) {
-else {
-    console.log('Lunghe uguali', wordOne, wordTwo);
-}
+// if (wordOne.length > wordTwo.length) {
+//     console.log('Più corta', wordTwo);
+//     console.log('Più lunga', wordOne);
+// }
+// else if (wordTwo.length > wordOne.length) {
+//     console.log('Più corta', wordOne);
+//     console.log('Più lunga', wordTwo);
+// } 
+// // else if (wordOne.length == wordTwo.length) {
+// else {
+//     console.log('Lunghe uguali', wordOne, wordTwo);
+// }
 
 // console.log('wordOne', wordOne, typeof wordOne, wordOne.length);
 // for (let i = 0; i < wordOne.length; i++) {
@@ -67,3 +67,31 @@ else {
 // for (let i = 0; i < wordTwo.length; i++) {
 //     console.log(wordTwo[i]);
 // }
+
+/* 
+    Snack 3
+
+    Il software deve chiedere per 10 volte all’utente di inserire un numero.
+    Il programma stampa la somma di tutti i numeri inseriti.
+
+    1. Creo un ciclo che arriva a 10 iterazioni
+    2. Per ogni iterazione, chiedo all'utente un numero
+    3. Sommo il nuovo numero con i precedenti
+    4. Stampo la somma
+*/
+
+let sum = 0;
+
+// for (let i = 1; i <= 10; i++) {
+for (let i = 0; i < 10; i++) {
+    const userNumber = parseInt(prompt('Inserisci un numero:'));
+
+    console.log('userNumber', userNumber, typeof userNumber);
+
+    if (!isNaN(userNumber)) {
+        // sum = sum + userNumber;
+        sum += userNumber;
+    }
+}
+
+console.log('La somma è:', sum);
